@@ -145,7 +145,7 @@ namespace SendSpace
             var info = this.uploadInfo;
             var url = new Uri(info.Upload.ProgressUrl);
 
-            await Task.Delay(TimeSpan.FromMilliseconds(200));
+            await Task.Delay(TimeSpan.FromMilliseconds(1000));
 
             ProgressHandler handler = Factory.Get<ProgressHandler>(url);
             handler.Progress += UploadProgress;
